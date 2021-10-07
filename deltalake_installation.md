@@ -1,6 +1,6 @@
 # Local Delta Lake Set up
 
-The following content is mainly based on the [official Delat Lake documentation](https://docs.delta.io/latest/quick-start.html#set-up-interactive-shell).
+The following content is mainly based on the [official *Delta Lake* documentation](https://docs.delta.io/latest/quick-start.html#set-up-interactive-shell).
 
 ## PySpark Shell
 
@@ -46,16 +46,35 @@ df = spark.read.format("delta").load("/tmp/delta-table")
 df.show()
 ```
 
+## Retrieve data in a new session
+
+1. Close your PySpark shell:
+
+```bash
+exit()
+````
+
+2. Start `PySpark` with the Delta Lake package and additional configurations:
+
+```bash
+pyspark --packages io.delta:delta-core_2.12:1.0.0 --conf "spark.sql.extensions=io.delta.sql.DeltaSparkSessionExtension" --conf "spark.sql.catalog.spark_catalog=org.apache.spark.sql.delta.catalog.DeltaCatalog"
+```
+
+3. Read data in your Delta table by specifying the path to the files: "/tmp/delta-table":
+
+```bash
+df = spark.read.format("delta").load("/tmp/delta-table")
+```
+
+2. Show data
+
+```bash
+df.show()
+```
+
+# Python examples
 
 
-
-https://github.com/kirenz/delta/tree/master/python
-
-pip install delta-spark
+- [Python examples](https://github.com/delta-io/delta/tree/master/examples/)
 
 
-[Python examples](https://github.com/delta-io/delta/tree/master/examples/)
-
-For Python examples, PySpark 3.0.0 or above needs to be installed.
-
-PySpark 3.1.2.
