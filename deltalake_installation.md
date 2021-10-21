@@ -2,6 +2,8 @@
 
 The following content is mainly based on the [official *Delta Lake* documentation](https://docs.delta.io/latest/quick-start.html#set-up-interactive-shell).
 
+Note that you first need to install Spark on your system. Follow this [tutorial to install the latest version of Spark](https://www.datacamp.com/community/tutorials/installation-of-pyspark) (don't install PySpark).
+
 ## PySpark Shell
 
 1. In your terminal install the `PySpark` version that is compatible with Delta Lake (PySpark 3.0.0 or above needs to be installed):
