@@ -2,7 +2,7 @@
 
 The following content is mainly based on the [official *Delta Lake* documentation](https://docs.delta.io/latest/quick-start.html#set-up-interactive-shell).
 
-Note that you first need to install Spark on your system. Follow this [tutorial to install the latest version of Spark](https://www.datacamp.com/community/tutorials/installation-of-pyspark) (don't install PySpark).
+Note that you first need to install Java and Spark on your system. Follow this [tutorial to install the latest version of Java and Spark](https://www.datacamp.com/community/tutorials/installation-of-pyspark) (don't install PySpark).
 
 ## PySpark Shell
 
